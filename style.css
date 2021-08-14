@@ -1,30 +1,233 @@
+/* Font */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Inter:wght@100..900&display=swap");
 
+/* CSS Variables - colors */
 :root {
   --white: #ffffff;
-  --indigo50: #eef2ff;
-  --indigo100: #e0e7ff;
-  --indigo200: #c7d2fe;
-  --indigo300: #a5b4fc;
-  --indigo400: #818cf8;
-  --indigo500: #6366f1;
-  --indigo600: #4f46e5;
-  --indigo700: #4338ca;
-  --indigo800: #3730a3;
-  --indigo900: #312e81;
+  --off-white: #f3f4f6;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
   --black: #000000;
 
-  --background-color: var(--indigo50);
+  /* --background-color: var(--indigo50);
   --primary-color: var(--indigo600);
   --secondary-color: var(--white);
   --accent-color: var(--indigo200);
-  --text-body-color: var(--black);
+  --text-body-color: var(--black); */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Website Typography */
 body {
   color: var(--text-body-color);
   font-family: "JetBrains Mono", monospace;
   font-family: "Inter", sans-serif;
   background-color: var(--background-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+hr {
+  margin: 2rem 0;
+}
+a {
+  text-decoration: none;
+}
+section {
   margin: auto;
+}
+section:nth-child(odd) {
+  background-color: var(--off-white);
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+.title {
+  color: var(--indigo-900);
+  line-height: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.heading {
+  color: var(--indigo-800);
+  font-size: 1.2rem;
+}
+/** containers **/
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1000px;
+}
+
+/** links **/
+
+.primary-link {
+  color: var(--indigo-50);
+  background-color: var(--indigo-900);
+  width: max-content;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.secondary-link {
+  color: var(--indigo-900);
+  border: 1px solid var(--indigo-900);
+  width: max-content;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.text-highlight {
+  font-weight: bold;
+}
+
+/** nav **/
+.navigation {
+  background-color: var(--indigo-900);
+  padding: 1rem 0rem;
+  color: var(--indigo-50);
+  border-bottom-left-radius: 1rem;
+}
+
+.navigation ul {
+  list-style: none;
+  text-align: right;
+  padding: 0px;
+}
+
+.navigation li {
+  display: inline-block;
+  padding: 0rem 0.2rem;
+}
+
+.navigation .brand-name {
+  float: left;
+  font-family: "JetBrains Mono", monospace;
+  font-size: larger;
+}
+.navigation a {
+  color: var(--indigo-50);
+}
+
+.navigation .active {
+  font-weight: bold;
+}
+
+/* hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 70vh;
+}
+
+.hero .hero-image {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: auto;
+}
+
+/* section */
+
+.section {
+  padding: 2rem;
+}
+
+/* lists */
+
+.unordered {
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
+
+/* row */
+.row-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  padding: 1rem;
+  max-width: 1000px;
+}
+.row-container div {
+  padding-left: 1rem;
+  text-align: justify;
+}
+
+/* blog */
+.blog {
+  text-align: left;
+}
+.blog p {
+  font-weight: normal;
+  text-align: justify;
+}
+
+/* project */
+.project-item {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-item p {
+  font-weight: normal;
+  text-align: justify;
+}
+
+/** footer **/
+.footer {
+  background-color: var(--indigo-900);
+  color: var(--indigo-50);
+  padding: 1rem 0rem;
+  border-top-right-radius: 1rem;
+}
+.footer .heading {
+  color: var(--indigo-50);
+  font-size: larger;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+.footer .link {
+  color: var(--indigo-50);
+}
+.footer a {
+  color: var(--indigo-50);
+  font-family: "JetBrains Mono", monospace;
+}
+@media (max-width: 800px) {
+  .row-container {
+    flex-direction: column;
+  }
 }
